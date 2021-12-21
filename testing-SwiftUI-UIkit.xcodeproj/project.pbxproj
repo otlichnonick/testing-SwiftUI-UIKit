@@ -7,20 +7,32 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		3A8525DF2771E7AD00413108 /* SwiftUIViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3A8525DA2771E7AC00413108 /* SwiftUIViewController.swift */; };
+		3A8525E02771E7AD00413108 /* UIKitiOS13ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3A8525DB2771E7AC00413108 /* UIKitiOS13ViewController.swift */; };
+		3A8525E12771E7AD00413108 /* UIKitiOS15ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3A8525DC2771E7AC00413108 /* UIKitiOS15ViewController.swift */; };
+		3A8525E22771E7AD00413108 /* TabBarController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3A8525DE2771E7AC00413108 /* TabBarController.swift */; };
+		3A8525E62771E7F100413108 /* StoryCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3A8525E52771E7F100413108 /* StoryCell.swift */; };
+		3A8525EA2771E94000413108 /* swiftgen.yml in Resources */ = {isa = PBXBuildFile; fileRef = 3A8525E92771E94000413108 /* swiftgen.yml */; };
+		3A8525F22771EA7100413108 /* GeneratedAssets.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3A8525F12771EA7100413108 /* GeneratedAssets.swift */; };
 		412CC90B27708B9A007A6788 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 412CC90A27708B9A007A6788 /* AppDelegate.swift */; };
 		412CC90D27708B9A007A6788 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 412CC90C27708B9A007A6788 /* SceneDelegate.swift */; };
 		412CC90F27708B9A007A6788 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 412CC90E27708B9A007A6788 /* ViewController.swift */; };
-		412CC91227708B9A007A6788 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 412CC91027708B9A007A6788 /* Main.storyboard */; };
 		412CC91427708B9B007A6788 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 412CC91327708B9B007A6788 /* Assets.xcassets */; };
 		412CC91727708B9B007A6788 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 412CC91527708B9B007A6788 /* LaunchScreen.storyboard */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		3A8525DA2771E7AC00413108 /* SwiftUIViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SwiftUIViewController.swift; sourceTree = "<group>"; };
+		3A8525DB2771E7AC00413108 /* UIKitiOS13ViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = UIKitiOS13ViewController.swift; sourceTree = "<group>"; };
+		3A8525DC2771E7AC00413108 /* UIKitiOS15ViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = UIKitiOS15ViewController.swift; sourceTree = "<group>"; };
+		3A8525DE2771E7AC00413108 /* TabBarController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TabBarController.swift; sourceTree = "<group>"; };
+		3A8525E52771E7F100413108 /* StoryCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = StoryCell.swift; sourceTree = "<group>"; };
+		3A8525E92771E94000413108 /* swiftgen.yml */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.yaml; path = swiftgen.yml; sourceTree = "<group>"; };
+		3A8525F12771EA7100413108 /* GeneratedAssets.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = GeneratedAssets.swift; sourceTree = "<group>"; };
 		412CC90727708B9A007A6788 /* testing-SwiftUI-UIkit.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "testing-SwiftUI-UIkit.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		412CC90A27708B9A007A6788 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		412CC90C27708B9A007A6788 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
 		412CC90E27708B9A007A6788 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
-		412CC91127708B9A007A6788 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		412CC91327708B9B007A6788 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		412CC91627708B9B007A6788 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		412CC91827708B9B007A6788 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
@@ -37,9 +49,61 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		3A8525D82771E7AC00413108 /* Controllers */ = {
+			isa = PBXGroup;
+			children = (
+				3A8525D92771E7AC00413108 /* ViewControllers */,
+				3A8525DD2771E7AC00413108 /* TabBarController */,
+			);
+			path = Controllers;
+			sourceTree = "<group>";
+		};
+		3A8525D92771E7AC00413108 /* ViewControllers */ = {
+			isa = PBXGroup;
+			children = (
+				3A8525DA2771E7AC00413108 /* SwiftUIViewController.swift */,
+				3A8525DB2771E7AC00413108 /* UIKitiOS13ViewController.swift */,
+				3A8525DC2771E7AC00413108 /* UIKitiOS15ViewController.swift */,
+			);
+			path = ViewControllers;
+			sourceTree = "<group>";
+		};
+		3A8525DD2771E7AC00413108 /* TabBarController */ = {
+			isa = PBXGroup;
+			children = (
+				3A8525DE2771E7AC00413108 /* TabBarController.swift */,
+			);
+			path = TabBarController;
+			sourceTree = "<group>";
+		};
+		3A8525E32771E7F100413108 /* Conponents */ = {
+			isa = PBXGroup;
+			children = (
+				3A8525E42771E7F100413108 /* Cells */,
+			);
+			path = Conponents;
+			sourceTree = "<group>";
+		};
+		3A8525E42771E7F100413108 /* Cells */ = {
+			isa = PBXGroup;
+			children = (
+				3A8525E52771E7F100413108 /* StoryCell.swift */,
+			);
+			path = Cells;
+			sourceTree = "<group>";
+		};
+		3A8525ED2771E9BA00413108 /* Generated */ = {
+			isa = PBXGroup;
+			children = (
+				3A8525F12771EA7100413108 /* GeneratedAssets.swift */,
+			);
+			path = Generated;
+			sourceTree = "<group>";
+		};
 		412CC8FE27708B9A007A6788 = {
 			isa = PBXGroup;
 			children = (
+				3A8525E92771E94000413108 /* swiftgen.yml */,
 				412CC90927708B9A007A6788 /* testing-SwiftUI-UIkit */,
 				412CC90827708B9A007A6788 /* Products */,
 			);
@@ -56,10 +120,12 @@
 		412CC90927708B9A007A6788 /* testing-SwiftUI-UIkit */ = {
 			isa = PBXGroup;
 			children = (
+				3A8525ED2771E9BA00413108 /* Generated */,
+				3A8525E32771E7F100413108 /* Conponents */,
+				3A8525D82771E7AC00413108 /* Controllers */,
 				412CC90A27708B9A007A6788 /* AppDelegate.swift */,
 				412CC90C27708B9A007A6788 /* SceneDelegate.swift */,
 				412CC90E27708B9A007A6788 /* ViewController.swift */,
-				412CC91027708B9A007A6788 /* Main.storyboard */,
 				412CC91327708B9B007A6788 /* Assets.xcassets */,
 				412CC91527708B9B007A6788 /* LaunchScreen.storyboard */,
 				412CC91827708B9B007A6788 /* Info.plist */,
@@ -74,6 +140,7 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = 412CC91B27708B9B007A6788 /* Build configuration list for PBXNativeTarget "testing-SwiftUI-UIkit" */;
 			buildPhases = (
+				3A8525F02771E9E300413108 /* SwiftGen */,
 				412CC90327708B9A007A6788 /* Sources */,
 				412CC90427708B9A007A6788 /* Frameworks */,
 				412CC90527708B9A007A6788 /* Resources */,
@@ -127,18 +194,45 @@
 			files = (
 				412CC91727708B9B007A6788 /* LaunchScreen.storyboard in Resources */,
 				412CC91427708B9B007A6788 /* Assets.xcassets in Resources */,
-				412CC91227708B9A007A6788 /* Main.storyboard in Resources */,
+				3A8525EA2771E94000413108 /* swiftgen.yml in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXResourcesBuildPhase section */
+
+/* Begin PBXShellScriptBuildPhase section */
+		3A8525F02771E9E300413108 /* SwiftGen */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+			);
+			name = SwiftGen;
+			outputFileListPaths = (
+			);
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "# Type a script or drag a script file from your workspace to insert its path.\nif which swiftgen >/dev/null; then\n  swiftgen\nelse\n  echo \"warning: SwiftGen not installed, download it from https://github.com/SwiftGen/SwiftGen\"\nfi\n\n\n";
+		};
+/* End PBXShellScriptBuildPhase section */
 
 /* Begin PBXSourcesBuildPhase section */
 		412CC90327708B9A007A6788 /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				3A8525E02771E7AD00413108 /* UIKitiOS13ViewController.swift in Sources */,
+				3A8525E12771E7AD00413108 /* UIKitiOS15ViewController.swift in Sources */,
+				3A8525DF2771E7AD00413108 /* SwiftUIViewController.swift in Sources */,
+				3A8525E62771E7F100413108 /* StoryCell.swift in Sources */,
 				412CC90F27708B9A007A6788 /* ViewController.swift in Sources */,
+				3A8525E22771E7AD00413108 /* TabBarController.swift in Sources */,
+				3A8525F22771EA7100413108 /* GeneratedAssets.swift in Sources */,
 				412CC90B27708B9A007A6788 /* AppDelegate.swift in Sources */,
 				412CC90D27708B9A007A6788 /* SceneDelegate.swift in Sources */,
 			);
@@ -147,14 +241,6 @@
 /* End PBXSourcesBuildPhase section */
 
 /* Begin PBXVariantGroup section */
-		412CC91027708B9A007A6788 /* Main.storyboard */ = {
-			isa = PBXVariantGroup;
-			children = (
-				412CC91127708B9A007A6788 /* Base */,
-			);
-			name = Main.storyboard;
-			sourceTree = "<group>";
-		};
 		412CC91527708B9B007A6788 /* LaunchScreen.storyboard */ = {
 			isa = PBXVariantGroup;
 			children = (
@@ -294,7 +380,7 @@
 				INFOPLIST_FILE = "testing-SwiftUI-UIkit/Info.plist";
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchStoryboardName = LaunchScreen;
-				INFOPLIST_KEY_UIMainStoryboardFile = Main;
+				INFOPLIST_KEY_UISupportedInterfaceOrientations = UIInterfaceOrientationPortrait;
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
 				LD_RUNPATH_SEARCH_PATHS = (
@@ -322,7 +408,7 @@
 				INFOPLIST_FILE = "testing-SwiftUI-UIkit/Info.plist";
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchStoryboardName = LaunchScreen;
-				INFOPLIST_KEY_UIMainStoryboardFile = Main;
+				INFOPLIST_KEY_UISupportedInterfaceOrientations = UIInterfaceOrientationPortrait;
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
 				LD_RUNPATH_SEARCH_PATHS = (
