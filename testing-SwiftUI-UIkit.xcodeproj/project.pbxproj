@@ -14,6 +14,7 @@
 		3A8525E62771E7F100413108 /* StoryCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3A8525E52771E7F100413108 /* StoryCell.swift */; };
 		3A8525EA2771E94000413108 /* swiftgen.yml in Resources */ = {isa = PBXBuildFile; fileRef = 3A8525E92771E94000413108 /* swiftgen.yml */; };
 		3A8525F22771EA7100413108 /* GeneratedAssets.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3A8525F12771EA7100413108 /* GeneratedAssets.swift */; };
+		3A8525F5277201DD00413108 /* GXUtilz in Frameworks */ = {isa = PBXBuildFile; productRef = 3A8525F4277201DD00413108 /* GXUtilz */; };
 		412CC90B27708B9A007A6788 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 412CC90A27708B9A007A6788 /* AppDelegate.swift */; };
 		412CC90D27708B9A007A6788 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 412CC90C27708B9A007A6788 /* SceneDelegate.swift */; };
 		412CC90F27708B9A007A6788 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 412CC90E27708B9A007A6788 /* ViewController.swift */; };
@@ -43,6 +44,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				3A8525F5277201DD00413108 /* GXUtilz in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -150,6 +152,9 @@
 			dependencies = (
 			);
 			name = "testing-SwiftUI-UIkit";
+			packageProductDependencies = (
+				3A8525F4277201DD00413108 /* GXUtilz */,
+			);
 			productName = "testing-SwiftUI-UIkit";
 			productReference = 412CC90727708B9A007A6788 /* testing-SwiftUI-UIkit.app */;
 			productType = "com.apple.product-type.application";
@@ -178,6 +183,9 @@
 				Base,
 			);
 			mainGroup = 412CC8FE27708B9A007A6788;
+			packageReferences = (
+				3A8525F3277201DD00413108 /* XCRemoteSwiftPackageReference "gxutilz" */,
+			);
 			productRefGroup = 412CC90827708B9A007A6788 /* Products */;
 			projectDirPath = "";
 			projectRoot = "";
@@ -446,6 +454,25 @@
 			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
+
+/* Begin XCRemoteSwiftPackageReference section */
+		3A8525F3277201DD00413108 /* XCRemoteSwiftPackageReference "gxutilz" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "https://gitlab.com/garpix/packages/swiftui/gxutilz";
+			requirement = {
+				kind = upToNextMajorVersion;
+				minimumVersion = 1.0.0;
+			};
+		};
+/* End XCRemoteSwiftPackageReference section */
+
+/* Begin XCSwiftPackageProductDependency section */
+		3A8525F4277201DD00413108 /* GXUtilz */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = 3A8525F3277201DD00413108 /* XCRemoteSwiftPackageReference "gxutilz" */;
+			productName = GXUtilz;
+		};
+/* End XCSwiftPackageProductDependency section */
 	};
 	rootObject = 412CC8FF27708B9A007A6788 /* Project object */;
 }

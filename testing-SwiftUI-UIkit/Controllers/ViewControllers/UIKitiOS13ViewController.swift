@@ -6,6 +6,7 @@
 //
 
 import UIKit
+import GXUtilz
 
 struct StoryModel {
     var image: String
@@ -13,48 +14,71 @@ struct StoryModel {
 }
 
 class UIKitiOS13ViewController: UIViewController {
-    var storiesCollectionView: UICollectionView!
-    let storiesContent: [StoryModel] = [
-    StoryModel(image: "", label: "Найти подрядчика легко")
+    private var storiesCollectionView: UICollectionView = {
+        let viewLayout = UICollectionViewFlowLayout()
+        let collectionView = UICollectionView(frame: .zero, collectionViewLayout: viewLayout)
+        collectionView.backgroundColor = .white
+        return collectionView
+    }()
+    
+    private let storiesContent: [StoryModel] = [
+        StoryModel(image: Asset.findContractor.name, label: "Найти подрядчика легко"),
+        StoryModel(image: Asset.hoseAndKey.name, label: "Ремонт под ключ"),
+        StoryModel(image: Asset._289.name, label: "Смотри, как женщина делает ремонт вместо тебя"),
+        StoryModel(image: Asset.fuckaaaa.name, label: "Сделай ремонт и не умри!")
     ]
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        view.backgroundColor = .red
-        configureStories()
+        setupViews()
+        setupLayout()
+        storiesCollectionView.reloadData()
     }
     
-    private func configureStories() {
-        let layout = UICollectionViewFlowLayout()
-        layout.scrollDirection = .vertical
-        storiesCollectionView = UICollectionView(frame: .zero, collectionViewLayout: layout)
+    func setupViews() {
+        view.backgroundColor = .red
         view.addSubview(storiesCollectionView)
         
         storiesCollectionView.delegate = self
         storiesCollectionView.dataSource = self
-        
+        storiesCollectionView.register(StoryCell.self, forCellWithReuseIdentifier: StoryCell.identifier)
+    }
+    
+    private func setupLayout() {
         storiesCollectionView.translatesAutoresizingMaskIntoConstraints = false
-        storiesCollectionView.register(StoryCell.self, forCellWithReuseIdentifier: "story")
         
         NSLayoutConstraint.activate([
-            storiesCollectionView.topAnchor.constraint(equalTo: view.topAnchor, constant: 20),
-            storiesCollectionView.leadingAnchor.constraint(equalTo: view.leadingAnchor, constant: 20),
-            storiesCollectionView.heightAnchor.constraint(equalToConstant: view.bounds.width * 0.3)
+            storiesCollectionView.topAnchor.constraint(equalTo: view.safeAreaLayoutGuide.topAnchor, constant: 20),
+            storiesCollectionView.leadingAnchor.constraint(equalTo: view.leadingAnchor),
+            storiesCollectionView.trailingAnchor.constraint(equalTo: view.trailingAnchor),
+            storiesCollectionView.bottomAnchor.constraint(equalTo: view.safeAreaLayoutGuide.bottomAnchor)
         ])
+    }
+    
+    init() {
+        super.init(nibName: nil, bundle: nil)
+    }
+    
+    required init?(coder: NSCoder) {
+        fatalError("init(coder:) has not been implemented")
     }
 }
 
-extension UIKitiOS13ViewController: UICollectionViewDelegate, UICollectionViewDataSource {
+extension UIKitiOS13ViewController: UICollectionViewDelegate, UICollectionViewDataSource, UICollectionViewDelegateFlowLayout {
     func collectionView(_ collectionView: UICollectionView, numberOfItemsInSection section: Int) -> Int {
         return storiesContent.count
     }
     
     func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {
-        let cell = collectionView.dequeueReusableCell(withReuseIdentifier: "story", for: indexPath) as! StoryCell
+        let cell = collectionView.dequeueReusableCell(withReuseIdentifier: StoryCell.identifier, for: indexPath) as! StoryCell
         let story = storiesContent[indexPath.item]
         cell.setContent(with: story)
+        cell.contentView.backgroundColor = .green
+        debugPrint(cell)
         return cell
     }
     
-    
+    func collectionView(_ collectionView: UICollectionView, layout collectionViewLayout: UICollectionViewLayout, sizeForItemAt indexPath: IndexPath) -> CGSize {
+        return CGSize(width: Display.width * 0.26, height: Display.width * 0.33)
+    }
 }

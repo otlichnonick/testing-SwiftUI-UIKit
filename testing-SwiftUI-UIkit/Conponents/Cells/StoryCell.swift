@@ -8,12 +8,24 @@
 import UIKit
 
 class StoryCell: UICollectionViewCell {
-    let avatarView = UIImageView(frame: .zero)
-    let label = UILabel()
+    static let identifier = "storyCell"
+    private let imageView: UIImageView = {
+        let imageView = UIImageView(frame: .zero)
+        imageView.contentMode = .scaleAspectFill
+        return imageView
+    }()
+    
+    private let label: UILabel = {
+        let label = UILabel(frame: .zero)
+        label.textAlignment = .left
+        label.numberOfLines = 0
+        label.font = UIFont.systemFont(ofSize: 12, weight: .bold)
+        return label
+    }()
     
     override init(frame: CGRect) {
-        super.init(frame: frame)
-        configure()
+        super.init(frame: .zero)
+        setupViews()
     }
     
     required init?(coder: NSCoder) {
@@ -21,25 +33,29 @@ class StoryCell: UICollectionViewCell {
     }
     
     func setContent(with story: StoryModel) {
-        avatarView.image = UIImage(named: story.image)
+        imageView.image = UIImage(named: story.image)
         label.text = story.label
     }
     
-    private func configure() {
-        avatarView.layer.cornerRadius = 15
-        label.font = UIFont.systemFont(ofSize: 12, weight: .bold)
+    private func setupViews() {
+        contentView.clipsToBounds = true
+        contentView.layer.cornerRadius = 15
+        contentView.backgroundColor = .white
         
-        addSubview(avatarView)
-        addSubview(label)
-        
+        contentView.addSubview(imageView)
+        contentView.addSubview(label)
+    }
+    
+    private func setupLayout() {
         let paddind: CGFloat = 8
         
-        avatarView.translatesAutoresizingMaskIntoConstraints = false
+        imageView.translatesAutoresizingMaskIntoConstraints = false
         label.translatesAutoresizingMaskIntoConstraints = false
+        
         NSLayoutConstraint.activate([
-            avatarView.centerXAnchor.constraint(equalTo: contentView.centerXAnchor),
-            avatarView.centerYAnchor.constraint(equalTo: contentView.centerYAnchor),
-            avatarView.widthAnchor.constraint(equalTo: contentView.widthAnchor),
+            imageView.centerXAnchor.constraint(equalTo: contentView.centerXAnchor),
+            imageView.centerYAnchor.constraint(equalTo: contentView.centerYAnchor),
+            imageView.widthAnchor.constraint(equalTo: contentView.widthAnchor),
             
             label.bottomAnchor.constraint(equalTo: contentView.bottomAnchor, constant: paddind),
             label.leadingAnchor.constraint(equalTo: contentView.leadingAnchor, constant: paddind),
